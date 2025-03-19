@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap');
 @import "tailwindcss";
 
 
@@ -12,8 +9,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 

@@ -20,7 +20,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased full-body`}>
+      <head>
+        {/* Import Google Fonts */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Margarine&family=Gluten:wght@100..900&display=swap"
+        />
+      </head>
+      <body className={` antialiased full-body`}>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
