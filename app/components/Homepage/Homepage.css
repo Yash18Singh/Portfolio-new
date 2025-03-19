@@ -1,0 +1,143 @@
+.home-body {
+    height:100%;
+}
+  
+.homepage{
+    display: flex;
+    justify-content: center;
+    padding:2% 15%;
+    width:100%;
+}
+
+.homepage-box {
+    padding: 8% 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.322);
+    backdrop-filter: blur(100%);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.261);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+    
+    /* Ensure the box takes the full screen height and centers */
+    height: 80vh; /* Adjust as needed */
+    max-width: 95%;
+    margin: auto; /* Center horizontally */
+}
+  
+
+.homepage-box-left{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.homepage-box-left > h1{
+    font-size:40;
+    font-weight:600;
+}
+.homepage-box-left > h5{
+    font-size:18px;
+    font-weight:500;
+}
+
+.resume-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 4% 10%;
+  width: 50%;
+  border: 5px solid rgba(0, 0, 0, 0.286);
+  background-color: rgba(255, 255, 255, 0.286);
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform, box-shadow;
+}
+
+/* On Hover */
+.resume-button:hover {
+  background-color: rgb(255, 255, 255);
+  border: 5px solid rgb(0, 0, 0);
+}
+
+
+.homepage-box-right{
+    width:70%;
+}
+.homepage-box-right > img{
+    width:80%;
+}
+
+
+@media (max-width: 1200px){
+  .homepage-box-right{
+    width:100%;
+  }
+  .homepage-box-right > img{
+      width:100%;
+  }
+}
+
+@media (max-width: 800px){
+  .homepage{
+    margin-top:10%;
+  }
+  .homepage-box-left{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+  }
+  .homepage-box-left > h1{
+      font-size:30px;
+  }
+  .homepage-box-left > h5{
+      font-size:14px;
+  }
+  .homepage-box-right{
+    width:150%;
+  }
+  .homepage-box-right > img{
+      width:150%;
+  }
+  .resume-button{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow:3px 3px 1px black;
+    width:100%;
+  }
+}
+
+@media (max-width: 550px){
+  .homepage{
+    padding:10px 5px;
+  }
+  .homepage-box{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+  }
+  .homepage-box-left{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .homepage-box-right{
+    width:100%;
+  }
+  .homepage-box-right > img{
+      width:100%;
+  }
+  .resume-button{
+    width:60%;
+  }
+}
