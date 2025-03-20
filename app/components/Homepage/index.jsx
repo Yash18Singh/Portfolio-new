@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import './Homepage.css'
 import Image from 'next/image'
@@ -9,10 +9,9 @@ const Homepage = () => {
 
   const handleMouseMove = (e) => {
     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - left - width / 2) / 6; // More dramatic tilt
-    const y = (e.clientY - top - height / 2) / 6;
+    const x = isNaN(e.clientX) ? 0 : (e.clientX - left - width / 2) / 6;
+    const y = isNaN(e.clientY) ? 0 : (e.clientY - top - height / 2) / 6;
 
-    // Shadow moves in the opposite direction
     const shadowX = -x * 2; 
     const shadowY = -y * 2;
 
@@ -63,6 +62,7 @@ const Homepage = () => {
         className='homepage-box'
         initial="hidden"
         animate="visible"
+        variants={{ hidden: {}, visible: {} }}
       >
         {/* Left Section */}
         <div className='homepage-box-left'>
@@ -72,25 +72,30 @@ const Homepage = () => {
              MERN STACK Developer, Front-End Designer & Mobile App Developer
           </motion.h5>
 
-          <div 
+          <motion.div 
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             onClick={downloadResume} 
             className='resume-button'
             style={transformStyle}
+            variants={buttonVariants}
+            whileHover="hover"
           >
             <h4>RESUME</h4>
-          </div>
+          </motion.div>
         </div>
 
         {/* Right Section */}
         <div className='homepage-box-right'>
-          <motion.img
-            className='profile-img'
-            src={'/my-img.png'}
-            alt="Profile"
-            variants={imageVariants}
-          />
+          <motion.div variants={imageVariants}>
+            <Image
+              className='profile-img'
+              src={'/my-img.png'}
+              alt="Profile"
+              width={300}
+              height={300}
+            />
+          </motion.div>
         </div>
       </motion.div>
     </div>

@@ -3,7 +3,6 @@ import Link from 'next/link'
 import React from 'react'
 import { motion } from 'framer-motion'
 import './Header.css'
-import { useParams } from 'next/navigation'
 import { usePathname } from 'next/navigation';
 
 const optionList = [
@@ -15,20 +14,26 @@ const optionList = [
 
 const Header = () => {
   const pathname = usePathname();
-  const lastSegment = pathname.split('/').filter(Boolean).pop(); // Extracts 'tech-stacks'
+  const lastSegment = pathname.split('/').filter(Boolean).pop();
   
-  console.log(lastSegment); // Output: "tech-stacks"
-
   const pageActive = () => {
-    switch(lastSegment){
+    if (!lastSegment) return 'Home';
+    switch(lastSegment) {
       case 'tech-stacks': return 'Tech Stacks';
       case 'projects': return 'Projects';
       case 'contact': return 'Contact';
-      default: return 'Home'
+      default: return 'Home';
     }
-  }
+  };
 
   // Animation Variants
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
   const itemVariants = {
     hidden: { y: -100, opacity: 0 },
     visible: { 
@@ -43,9 +48,7 @@ const Header = () => {
       className='header'
       initial="hidden"
       animate="visible"
-      variants={{
-        visible: { transition: { staggerChildren: 0.2 } }
-      }}
+      variants={containerVariants}
     >
       {/* Logo Section */}
       <Link href={'/'}>
@@ -63,17 +66,16 @@ const Header = () => {
           <Link key={index} href={option.url}>
            <motion.h3
               className='header-option'
-              style={{color: pageActive() === option.name ? 'white' : 'black'}}
+              style={{ color: pageActive() === option.name ? 'white' : 'black' }}
               variants={itemVariants}
               whileHover={{
-                scale: 1.5,
-                rotateY: 45,
+                scale: 1.2,
+                rotateY: 20,
                 transition: { duration: 0.2 },
               }}
             >
               {option.name}
             </motion.h3>
-
           </Link>
         ))}
       </motion.div>
