@@ -1,5 +1,5 @@
 .contact-container{
-    height:100vh;
+    height:100%;
     padding:2% 10%;
     justify-content: center;
     align-items: center;
@@ -62,6 +62,7 @@
 .contact-links{
     display: flex;
     flex-direction: row;
+    gap:20px;
     justify-content: space-between;
     align-items: center;
     width:90%;
@@ -70,6 +71,8 @@
 
 .single-link{
     padding:30px 20px;
+    justify-content: center;
+    align-items: center;
     background: rgba(198, 198, 198, 0.148);
     backdrop-filter: blur(100%);
     -webkit-backdrop-filter: blur(20px);
@@ -81,4 +84,36 @@
 .single-link > img{
     height:100px;
     width:100px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 900px){
+    .contact-links{
+        display:grid;
+        grid-template-columns: auto auto auto;
+    }
+    .single-link > img{
+        height:80px;
+        width:80px;
+    }
+}
+
+@media (max-width: 500px){
+    .contact-links{
+        display:grid;
+        grid-template-columns: auto auto;
+    }
+    .single-link > img{
+        height:80px;
+        width:80px;
+    }
+    .contact-container{
+        padding:10px 10px;
+        margin-top:10%;
+    }
+    .contact-body{
+        padding:20px 20px;
+    }
 }

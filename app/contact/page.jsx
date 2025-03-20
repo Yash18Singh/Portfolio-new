@@ -31,10 +31,8 @@ const Contact = () => {
       <div className='contact-body'>
 
         {/* Form Section */}
-        <motion.form
+        <motion.div
           className="contact-form"
-          action="https://formsubmit.co/yashwantsingh071@gmail.com"
-          method="POST"
           variants={formVariants}
           initial="hidden"
           animate="visible"
@@ -44,13 +42,12 @@ const Contact = () => {
           <textarea name="message" placeholder="Message..." required></textarea>
           
           <motion.button
-            type="submit"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
             SEND
           </motion.button>
-        </motion.form>
+        </motion.div>
 
         {/* Links Section */}
         <div className='contact-links'>

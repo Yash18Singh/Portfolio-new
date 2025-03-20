@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Yashwant | Portfolio",
-  description: "A creative MERN Stack developer portfolio.",
+  description: "PORTFOLIO OF YASHWANT SINGH",
 };
 
 export default function RootLayout({ children }) {
