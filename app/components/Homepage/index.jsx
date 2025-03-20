@@ -66,8 +66,8 @@ const Homepage = () => {
       >
         {/* Left Section */}
         <div className='homepage-box-left'>
-          <motion.h1 variants={textVariants}>Hi! I'm</motion.h1>
-          <motion.h1 variants={textVariants} style={{ color: '#ff7a00' }}>YASHWANT</motion.h1>
+          <motion.h1 variants={textVariants} style={{fontSize:40}}>Hi! I'm</motion.h1>
+          <motion.h1 variants={textVariants} style={{ color: '#ff7a00', fontSize:40}}>YASHWANT</motion.h1>
           <motion.h5 variants={textVariants}>
              MERN STACK Developer, Front-End Designer & Mobile App Developer
           </motion.h5>

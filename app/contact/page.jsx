@@ -37,9 +37,9 @@ const Contact = () => {
           initial="hidden"
           animate="visible"
         >
-          <input type="text" name="name" placeholder="Name..." required />
-          <input type="email" name="email" placeholder="Email..." required />
-          <textarea name="message" placeholder="Message..." required></textarea>
+          <input style={{borderRadius:20}} type="text" name="name" placeholder="Name..." required />
+          <input style={{borderRadius:20}} type="email" name="email" placeholder="Email..." required />
+          <textarea style={{borderRadius:20}} name="message" placeholder="Message..." required></textarea>
           
           <motion.button
             whileHover={{ scale: 1.1 }}
