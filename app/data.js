@@ -104,6 +104,16 @@ export const TechStackList = [
 
 export const projectList = [
     {
+        id:'pixilo',
+        name:"Pixilo",
+        description:"A modern, intuitive, and powerful online design editor built for creators, designers, and businesses who want to craft visually appealing graphics effortlessly.",
+        tags:['fabric.js', "next.js", 'node.js', 'express.js', 'mongoDB', 'cloudinary', 'next-auth', 'shadcn', 'tailwind'],
+        image: '/project-images/pixilo.png',
+        
+        demo:"http://pixilo.vercel.app/",
+        github:"https://github.com/Yash18Singh/Pixilo"
+    },
+    {
         id:13,
         name:"Momento",
         description:"A full stack social media mobile app with functionalities like Posts and Stories Upload, Add/Remove friends, Real Time Chatting, Interaction with Posts and more",
@@ -114,16 +124,6 @@ export const projectList = [
         github:"https://github.com/Yash18Singh/Momento"
     },
      {
-        id:9,
-        name:"Ezzstar",
-        description:"Web3 Project",
-        tags:["reactjs", 'css', 'tailwind'],
-        image: '/project-images/ezzstar.png',
-        
-        demo:"https://ezzstar.space",
-        github:"https://ezzstar.space"
-    },
-     {
         id:12,
         name:"Amour Dating App",
         description:"A full stack mobile dating app created using React native with functionalities like Profile Creation, Login, Match with Profiles, Chat, Profile Editing",
@@ -132,6 +132,16 @@ export const projectList = [
         
         demo:"https://drive.google.com/drive/u/2/folders/16ids45swmPC0lBGoNFECXZTH9Jw7P1LK",
         github:"https://github.com/Yash18Singh/Amour-Dating-App"
+    },
+    {
+        id:9,
+        name:"Ezzstar",
+        description:"Web3 Project",
+        tags:["reactjs", 'css', 'tailwind'],
+        image: '/project-images/ezzstar.png',
+        
+        demo:"https://ezzstar.space",
+        github:"https://ezzstar.space"
     },
        {
         id:14,

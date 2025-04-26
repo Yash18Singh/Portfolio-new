@@ -68,8 +68,13 @@
 @media(max-width:500px){
     .tech-stacks-list{
         grid-template-columns: repeat(1, 1fr);
+        background-color: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(0%);
+    }
+    .tech-stack{
+        padding:1% 1%;
     }
     .tech-stack > img{
-        width:170px;
+        width:100px;
     }
 }

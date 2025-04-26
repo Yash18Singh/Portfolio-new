@@ -75,7 +75,7 @@ const Homepage = () => {
           <motion.div 
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            onClick={downloadResume} 
+            onClick={() => window.open('https://drive.google.com/file/d/1gSbMm80Gqet6J-BFeYEFJvLmetLVfPpz/view?usp=sharing')} 
             className='resume-button'
             style={transformStyle}
             variants={buttonVariants}
